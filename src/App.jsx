@@ -33,7 +33,7 @@ function App() {
     getData()
    
 
-  },[])
+  },[currentApi])
 //   console.log(data);
 //  console.log(next);
 //  console.log(prev)
