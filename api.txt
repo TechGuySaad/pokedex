@@ -1,0 +1,31 @@
+https://pokeapi.co/api/v2/pokemon
+
+
+
+async function getData() {
+  const response = await axios.get('https://api.example.com/data');
+  return response.data;
+}
+
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function MyComponent() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await getData();
+      setData(result);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {/* Render your data here */}
+    </div>
+  );
+}
